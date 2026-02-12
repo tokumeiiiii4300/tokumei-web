@@ -1,10 +1,14 @@
-const CLASSNAME = "-visible";
-const TIMEOUT = 1500;
-const target = document.querySelector(".title");
+$(function () {
+  const CLASSNAME = "-visible";
+  const TIMEOUT = 1500;
+  const $target = $(".title");
 
-setInterval(() => {
-  target.classList.add(CLASSNAME);
-  setTimeout(() => {
-    target.classList.remove(CLASSNAME);
-  }, TIMEOUT);
-}, TIMEOUT * 2);
+  setInterval(() => {
+    $target.addClass(CLASSNAME);
+
+    setTimeout(() => {
+      $target.removeClass(CLASSNAME);
+    }, TIMEOUT);
+
+  }, TIMEOUT * 2);
+});
